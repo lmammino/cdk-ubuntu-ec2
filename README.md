@@ -1,14 +1,51 @@
-# Welcome to your CDK TypeScript project!
+# cdk-ubuntu-ec2
 
-This is a blank project for TypeScript development with CDK.
+This repository shows an example of using [AWS CDK](https://aws.amazon.com/cdk/) to provision an Ubuntu-based EC2 instance with a running nginx server.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This will include installing the [AWS Linux utilities](https://github.com/aws-quickstart/quickstart-linux-utilities) in the machine.
 
-## Useful commands
+You can read more about this example in the article [Provision an Ubuntu-based EC2 instance with CDK](https://loige.co/provision-ubuntu-ec2-with-cdk).
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+
+## Code structure
+
+This is a standard CDK project.
+
+The main stack definition can be found in [`lib/cdk-ubuntu-ec2-stack.ts`](/lib/cdk-ubuntu-ec2-stack.ts).
+
+The stack is instantiated in [`bin/cdk-ubuntu-ec2.ts`](/bin/cdk-ubuntu-ec2.ts).
+
+
+## Requirements and deployment
+
+In order to be able to deploy this CDK project you need to have the following:
+
+  - An AWS account
+  - The [AWS CLI](https://aws.amazon.com/cli/) installed and configured in your development machine
+  - [AWS CDK](https://aws.amazon.com/cdk/) installed and configured in your development machine
+
+In order to deploy this CDK project to your AWS account you simply have to clone this repository and from the root folder of the project run:
+
+```bash
+cdk deploy
+```
+
+Then prompt `y` for yes.
+
+If you want to clean up your account you can delete this stack with:
+
+```bash
+cdk destroy
+```
+
+
+## Contributing
+
+Everyone is very welcome to contribute to this project.
+You can contribute just by submitting bugs or suggesting improvements by
+[opening an issue on GitHub](https://github.com/lmammino/cdk-ubuntu-ec2/issues).
+
+
+## License
+
+Licensed under [MIT License](LICENSE). © Luciano Mammino.
