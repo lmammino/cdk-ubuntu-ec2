@@ -23,12 +23,21 @@ In order to be able to deploy this CDK project you need to have the following:
   - An AWS account
   - The [AWS CLI](https://aws.amazon.com/cli/) installed and configured in your development machine
   - [AWS CDK](https://aws.amazon.com/cdk/) installed and configured in your development machine
+  - Node.js and npm installed
 
-In order to deploy this CDK project to your AWS account you simply have to clone this repository and from the root folder of the project run:
+Now, in order to deploy this CDK project to your AWS account, you simply have to clone this repository and from the root folder of the project run:
+
+```bash
+npm install
+```
+
+To install the necessary dependencies, and then:
 
 ```bash
 cdk deploy
 ```
+
+To synthesise and deploy the project stack.
 
 Then prompt `y` for yes.
 
