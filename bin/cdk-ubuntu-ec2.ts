@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
-import { CdkUbuntuEc2Stack } from '../lib/cdk-ubuntu-ec2-stack';
+import 'source-map-support/register'
+import * as cdk from '@aws-cdk/core'
+import { CdkUbuntuEc2Stack } from '../lib/cdk-ubuntu-ec2-stack'
 
-const app = new cdk.App();
+const app = new cdk.App()
 new CdkUbuntuEc2Stack(app, 'CdkUbuntuEc2Stack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
@@ -18,4 +18,4 @@ new CdkUbuntuEc2Stack(app, 'CdkUbuntuEc2Stack', {
   // env: { account: '123456789012', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
-});
+})
